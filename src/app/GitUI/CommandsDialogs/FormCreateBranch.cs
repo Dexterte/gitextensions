@@ -105,7 +105,7 @@ namespace GitUI.CommandsDialogs
                 return;
             }
 
-            string branchName = BranchNameTextBox.Text.Trim();
+            string branchName = BranchNameTextBox.Text.Trim().Replace("\"", "");
             if (string.IsNullOrWhiteSpace(branchName))
             {
                 MessageBox.Show(_branchNameIsEmpty.Text, Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
